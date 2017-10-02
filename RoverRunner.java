@@ -2,7 +2,7 @@
 /**
  * Write a description of class RoverRunner here.
  * 
- * @author (your name) 
+ * @author (Carrington Jones) 
  * @version (a version number or a date)
  */
 public class RoverRunner
