@@ -9,24 +9,26 @@ public class RoverRunner
 {
     public static void main(String[] arrrggggggs)
     {
-        Rover r1 = new Rover("Curiosity");
-        Rover r2 = new Rover("Spirit");
+        //Rover r1 = new Rover("Curiosity");
+        //Rover r2 = new Rover("Spirit");
+        //Rover r3 = new Rover ("BRUHHH");
+        //Rover r4 = new Rover("R2-D2");
         
-        System.out.println(r1);
+        //System.out.println(r1);
         
-        r1.move();
-        System.out.println(r1);
+        //r1.move();
+        //System.out.println(r1);
 
-        r1.rotateRight();
-        System.out.println(r1);
+        //r1.rotateRight();
+        //System.out.println(r1);
         
-        r2.rotateLeft();
-        System.out.println(r2);
+        //r2.rotateLeft();
+        //System.out.println(r2);
         
-        r2.move();
-        System.out.println(r2);
+        //r2.move();
+        //System.out.println(r2);
         
-        r1.move();
-        System.out.println(r1);
+        //r1.move();
+        //System.out.println(r1);
     }
 }

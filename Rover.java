@@ -2,49 +2,66 @@
 /**
  * Write a description of class Rover here.
  * 
- * @author (Carrington Jones) 
- * @version (a version number or a date)
+ * @author Carrington Jones 
+ * @version (9/21/17)
  */
 public class Rover
 {
     // fields
-    String name;
-    int x;
-    int y;
-    int dir; // 0=North, 1=East, 2=South, 3=West
-    
-    
+    private String name;
+    private int x;
+    private int y;
+    private int dir; // 0=North, 1=East, 2=South, 3=West
+    private int numPics; 
+    private int maxPics;
+    private double energy;
+    private boolean isAlive; 
+
     // constructor(s)
-    public Rover(String name)
-    {
+    public Rover(String name, int x, int y, int dir) {
         this.name = name;
-        this.x = 0;
-        this.y = 0;
-        this.dir = 0;
+        this.x = x;
+        this.y = y;
+        this.dir = dir;
+        this.isAlive = true; 
+        this.energy = 60;
+        this.maxPics = 15;
+        this.numPics = 0; 
+    }
+    /**
+     * The name of the rover is changed
+     * @param Name the name of the rover 
+     */
+    public void setName(String name) {
+        this.name = name; 
     }
     
     
     // methods - stuff the Rover can do
-    public void move()
+    public void move(int w)
     {
         if (dir == 0)
         {
-            y += 1;
+            y += w;
         }
         else if (dir == 1)
         {
-            x += 1;
+            x += w;
         }
         else if (dir == 2)
         {
-            y -= 1;
+            y -= w;
         }
         else 
         {
-            x -= 1;
+            x -= w;
         }
         
-        System.out.println(name + " moved in direction " + dir);
+        this.energy -= (1*w);
+        
+        
+        //System.out.println(name + "moved" + getDirectionName(dir) + " by " + w);
+        //adjustEnergy(w * -5); 
     }
     
     public void rotateLeft() 
