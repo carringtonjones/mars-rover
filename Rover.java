@@ -35,8 +35,9 @@ public class Rover
     public void setName(String name) {
         this.name = name; 
     }
-    
-    
+    public String getName() {
+        return this.name; 
+    } 
     // methods - stuff the Rover can do
     public void move(int w)
     {
