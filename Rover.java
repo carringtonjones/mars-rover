@@ -17,6 +17,7 @@ public class Rover {
     private boolean isAlive = true;
     private int startingx;
     private int startingy;
+    
     /**
      * Constuctor(s)
      * 
@@ -31,6 +32,7 @@ public class Rover {
         this.dir = 0;
         this.startingx = x;
         this.startingy = y; 
+        
     }
     /**
      * Is returning the direction of the rover
@@ -44,28 +46,39 @@ public class Rover {
         if (isAlive) {
             if (dir == 0) {
                 return "North";
+                
             } else if (dir == 1) {
                 return "North North";
+                
             } else if (dir == 2) {
                 return "North East";
+                
             } else if (dir == 3) {
                 return "North South";
+                
             } else if (dir == 4) {
                 return "North West";
+                
             } else if (dir == 5) {
                 return "East";
+                
             } else if (dir == 6) {
                 return "East North";
+                
             } else if (dir == 7) {
                 return "East South";
+                
             } else if (dir == 8) {
                 return "East west";
+                
             } else {
                 return null;
+                
             }
         } else {
             System.out.println(name + " is disabled until further notice!");
             return null;
+            
         }
     }          
     /**
@@ -74,12 +87,14 @@ public class Rover {
     */
     public void setName(String name) {
         this.name = name; 
+        
     }
     /** 
      * @param getName() Public string, that returns the rover name 
      */
     public String getName() {
         return name;
+        
     } 
     /**
      * Calling rover String name this.x and this.y
@@ -89,6 +104,7 @@ public class Rover {
         System.out.println(name + " just teleported to [" + x + "," + y + "].");
         this.x = x;
         this.y = y; 
+        
     } 
     // methods - stuff the Rover can do
     /** 
@@ -102,39 +118,52 @@ public class Rover {
     public void move(int d) {
         if (dir == 0) {
             y += d;
+            
         } else if (dir == 1) {
             x += d;
             y += d;
+            
         } else if (dir == 2) {
             x += d; 
+            
         } else if (dir == 3) {
             x += d;
-            y -= d; 
+            y -= d;
+            
         } else if (dir == 4) {
             y -= d;
+            
         } else if (dir == 5) {
             x -= d;
             y -= d;
+            
         } else if (dir == 6) {
             x -= d;
+            
         } else if (dir == 7) {
             x -= d;
             y += d;
+            
         }
         System.out.println(name + " moved " + d + " places " + getDirectionName(dir) + ".");
+        
     }
         // this.energy -= (1*d);
         // System.out.println(name + "moved" + getDirectionName(dir) + " by " + d);
         // adjustEnergy(d * -5);
+        
      /**
       * rotateLeft() Moves the rover left
       */
      public void rotateLeft() {
         dir -= 1;
+        
         if (dir < 0) {
             dir = 7;
+            
         }
-        System.out.println(name + " rotated to the left.");        
+        System.out.println(name + " rotated to the left.");    
+        
     }
     /** 
      * rotateRight() Moves the rover right
@@ -142,10 +171,13 @@ public class Rover {
     public void rotateRight()
     {
         dir += 1;
+        
         if (dir == 8) {
             dir = 0;
+            
         }
-        System.out.println(name + " rotated to the right.");        
+        System.out.println(name + " rotated to the right.");  
+        
     }
     /**
      * Rover is being turned in a positive or negative direction based on the int
@@ -159,11 +191,14 @@ public class Rover {
         if (d >= 0) {
             for (int i = 0; i < d; i++) {
                 rotateRight();
+                
             }
         } else {
             d = Math.abs(d);
+            
             for (int i = 0; i < d; i++) {
                 rotateLeft();
+                
             }
         }
     }
@@ -172,7 +207,8 @@ public class Rover {
      */
     public String toString() 
     {
-        return "Rover[Name = " + name + ", X = " + x + ", Y = " + y + ", Direction = " + getDirectionName(dir) + ", Pictures = " + numPics +"]";
+        return "Rover(Name: " + name + ", X = " + x + ", Y = " + y + ", Direction: " + getDirectionName(dir) + ", Pictures: " + numPics +")";
+       
     }
     /**
      * Takes Pictures 
@@ -185,8 +221,10 @@ public class Rover {
         if (numPics > 3) {
             System.out.println(" Memory is full, try posting pictures to instagram first and then try again.");
             numPics -= 1;
+            
         } else {
-            System.out.println(name + " just snapped a picture at [" + x + "," + y + "] using the sepia filter !");
+            System.out.println(name + " just snapped a picture at (" + x + "," + y + ") using the sepia filter !");
+            
         }
     }
     /**
@@ -196,6 +234,7 @@ public class Rover {
     public void transmitPictures() {
         System.out.println(name + " just posted " + numPics + " pictures to Insta.");
         numPics = 0;
+        
     }
     /**
      * Rotates Rover in a negative and positive direction 
@@ -205,25 +244,31 @@ public class Rover {
         if (dir != 0) {
             if (dir >= 0) {
                 rotate (-dir);
+                
             } else {
                 rotate(dir);
+                
             }
         }
         if (x >= 0) {
-            rotate(2);
+            rotate(3);
             move(x - this.x);
-            rotate(-2);
+            rotate(-3);
+            
         } else {
-            rotate(6);
+            rotate(5);
             move(Math.abs(x - this.x));
-            rotate(-6); 
+            rotate(-5); 
+            
         }
         if (y >= 0) {
             move(y - this.y);
+            
         } else {
-            rotate(4);
+            rotate(6);
             move(Math.abs(y - this.y));
-            rotate(-4);
+            rotate(-6);
+            
         }
     } 
     /**
@@ -231,5 +276,6 @@ public class Rover {
      */
     public void goHome() {
         moveTo(startingx, startingy);
+        
     }
 }
