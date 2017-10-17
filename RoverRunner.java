@@ -53,20 +53,20 @@ public class RoverRunner
                     actor.rotateLeft();
                 } else if (command.equals("4")) {
                 } else if (command.equals("5")) {
-                    System.out.println("Enter rover x cord: ");
+                    System.out.println(" Enter a rover x cord: ");
                     int x = input.readInt();
-                    System.out.println("Enter rover y cord: ");
+                    System.out.println(" Enter a rover y cord: ");
                     int y = input.readInt();
 
                     actor.teleport(x, y);
                 } else {
-                    System.out.println("Failed: Command doesnt exist.");
+                    System.out.println(" Failed: Command doesnt exist. ");
                 }
                 System.out.println(actor);
             } else if (name.equals(exitCommand)) {
                 running = false; 
             } else {
-                System.out.println("Failed: Rover" + name + " could not be found.");
+                System.out.println(" Failed: " + name + " could not be found.");
             }
             System.out.println();
         }

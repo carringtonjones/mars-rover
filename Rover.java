@@ -189,10 +189,10 @@ public class Rover {
     public void takePicture() {
         numPics += 1;
         if (numPics > 5) {
-            System.out.println("Memory is full, try transferring pictures first and then try again.");
+            System.out.println(" Memory is full, try transferring pictures first and then try again.");
             numPics -= 1;
         } else {
-            System.out.println(name + "just snapped a picture at [" + x + "," + y + "] using the sepia filter!");
+            System.out.println(name + " just snapped a picture at [" + x + "," + y + "] using the sepia filter!");
         }
     }
     /**
