@@ -1,4 +1,3 @@
-
 /**
  * Functional Rover 
  * 
@@ -232,4 +231,3 @@ public class Rover {
         moveTo(startingx, startingy);
     }
 }
-    

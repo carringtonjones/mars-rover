@@ -34,29 +34,26 @@ public class RoverRunner
             
             if (actor != null) {
                 System.out.println("Type a menu number here:");
-                System.out.println("1. Rover movement");
-                System.out.println("2. Teleportation");
-                System.out.println("3. Rotation to the right");
-                System.out.println("4. Rotation to the left");
+                System.out.println("1. Rover Movement");
+                System.out.println("2. Rotation to the right");
+                System.out.println("3. Rotation to the left");
+                System.out.println("4. Teleportation");
                 String command = input.readString();
                 if (command.equals("1")) {
                     System.out.println("Enter a x coordinate: ");
                     int x = input.readInt();
                     System.out.println("Enter a y coordinate: ");
                     int y = input.readInt();
-
                     actor.moveTo(x, y);
                 } else if (command.equals("2")) {
                     actor.rotateRight();
                 } else if (command.equals("3")) {
                     actor.rotateLeft();
                 } else if (command.equals("4")) {
-                } else if (command.equals("5")) {
                     System.out.println(" Enter a rover x cord: ");
                     int x = input.readInt();
                     System.out.println(" Enter a rover y cord: ");
                     int y = input.readInt();
-
                     actor.teleport(x, y);
                 } else {
                     System.out.println(" Failed: Command doesnt exist. ");
