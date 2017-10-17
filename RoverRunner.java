@@ -1,9 +1,8 @@
-
 /**
- * Write a description of class RoverRunner here.
+ * Runs rover
  * 
  * @author (Carrington Jones) 
- * @version (a version number or a date)
+ * @version (9/21/17)
  */
 import java.util.Scanner;
 

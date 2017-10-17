@@ -1,8 +1,8 @@
 /**
- * Write a description of class RoverRunner here.
+ * Runs Rover
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Carrington Jones) 
+ * @version (9/21/17)
  */
 
 import java.util.ArrayList;

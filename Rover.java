@@ -197,7 +197,8 @@ public class Rover {
         numPics = 0;
     }
     /**
-     * 
+     * Rotates Rover in a negative and positive direction 
+     * @param moveTo public function
      */
     public void moveTo(int x, int y) {
         if (dir != 0) {
