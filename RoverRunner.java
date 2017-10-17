@@ -41,9 +41,9 @@ public class RoverRunner
                 System.out.println("4. Rotation to the left");
                 String command = input.readString();
                 if (command.equals("1")) {
-                    System.out.println("Enter x cord: ");
+                    System.out.println("Enter a x cordinate: ");
                     int x = input.readInt();
-                    System.out.println("Enter y cord: ");
+                    System.out.println("Enter a y cordinate: ");
                     int y = input.readInt();
 
                     actor.moveTo(x, y);

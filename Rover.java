@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class Rover here.
+ * Functional Rover 
  * 
  * @author Carrington Jones 
  * @version (9/21/17)
@@ -82,17 +82,9 @@ public class Rover {
     public String getName() {
         return name;
     } 
-    ///**
-    //* Where the rover's die
-    //* @param death All rovers die and become unable to function 
-    //*/
-    //private void die() { 
-    //   isAlive = false; 
-    //    System.out.println(name + " is dead.");
-    //} 
     /**
      * Calling rover String name this.x and this.y
-     * @param 
+     * @param teleport public function
      */
     public void teleport(int x, int y) {
         System.out.println(name + "just teleported to [" + x + "," + y + "].");
@@ -184,7 +176,8 @@ public class Rover {
         return "Rover[name=" + name + ", x=" + x + ", y=" + y + ", dir=" + getDirectionName(dir) + ", pics=" +numPics +"]";
     }
     /**
-     * 
+     * Takes Pictures 
+     * @param takePicture() public function 
      */
     public void takePicture() {
         numPics += 1;
@@ -196,7 +189,8 @@ public class Rover {
         }
     }
     /**
-     * 
+     * Sends Pictures to "Instagram" 
+     * @param transmitPicturs() public function 
      */
     public void transmitPictures() {
         System.out.println(name + " just posted " + numPics + " to Insta.");
@@ -231,7 +225,7 @@ public class Rover {
         }
     } 
     /**
-     * 
+     * Takes the rover home, to its original cordinates 
      */
     public void goHome() {
         moveTo(startingx, startingy);
