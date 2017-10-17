@@ -86,7 +86,7 @@ public class Rover {
      * @param teleport public function
      */
     public void teleport(int x, int y) {
-        System.out.println(name + "just teleported to [" + x + "," + y + "].");
+        System.out.println(name + " just teleported to [" + x + "," + y + "].");
         this.x = x;
         this.y = y; 
     } 
@@ -172,19 +172,21 @@ public class Rover {
      */
     public String toString() 
     {
-        return "Rover[name=" + name + ", x=" + x + ", y=" + y + ", dir=" + getDirectionName(dir) + ", pics=" +numPics +"]";
+        return "Rover[Name = " + name + ", X = " + x + ", Y = " + y + ", Direction = " + getDirectionName(dir) + ", Pictures = " + numPics +"]";
     }
     /**
      * Takes Pictures 
+     * Can't take more than 3 pictures or memory will be full
      * @param takePicture() public function 
+     * 
      */
     public void takePicture() {
         numPics += 1;
-        if (numPics > 5) {
-            System.out.println(" Memory is full, try transferring pictures first and then try again.");
+        if (numPics > 3) {
+            System.out.println(" Memory is full, try posting pictures to instagram first and then try again.");
             numPics -= 1;
         } else {
-            System.out.println(name + " just snapped a picture at [" + x + "," + y + "] using the sepia filter!");
+            System.out.println(name + " just snapped a picture at [" + x + "," + y + "] using the sepia filter !");
         }
     }
     /**
@@ -192,7 +194,7 @@ public class Rover {
      * @param transmitPicturs() public function 
      */
     public void transmitPictures() {
-        System.out.println(name + " just posted " + numPics + " to Insta.");
+        System.out.println(name + " just posted " + numPics + " pictures to Insta.");
         numPics = 0;
     }
     /**

@@ -38,11 +38,15 @@ public class RoverRunner
                 System.out.println("(2) Rotation to the right");
                 System.out.println("(3) Rotation to the left");
                 System.out.println("(4) Teleportation");
+                System.out.println("(5) Go Home");
+                System.out.println("(6) Take a fire instagram picture");
+                System.out.println("(7) Add cool Sepia filter to picture");
+                System.out.println("(8) Post picture to instagram");
                 String command = input.readString();
                 if (command.equals("1")) {
-                    System.out.println("Type a x coordinate to move: ");
+                    System.out.println(" Type a x coordinate to move the Rover: ");
                     int x = input.readInt();
-                    System.out.println("Type a y coordinate to move: ");
+                    System.out.println(" Type a y coordinate to move the Rover: ");
                     int y = input.readInt();
                     actor.moveTo(x, y);
                 } else if (command.equals("2")) {
@@ -55,15 +59,25 @@ public class RoverRunner
                     System.out.println(" Type a rover y coordinate to teleport:  ");
                     int y = input.readInt();
                     actor.teleport(x, y);
-                } else {
+                } else if (command.equals("5")) {
+                    actor.goHome();
+                } else if (command.equals("6")) {
+                    actor.takePicture();
+                } else if (command.equals("7")) {
+                    System.out.println("Add the Sepia Filter to " +  name  + "'s instagram photo!");
+                    String filter = input.readString();
+                    actor.takePicture();
+                } else if (command.equals("8")) {
+                    actor.transmitPictures();
+                } else { 
                     System.out.println(" Failed: Command doesnt exist. ");
                 }
                 System.out.println(actor);
-            } else if (name.equals(exitCommand)) {
+           } else if (name.equals(exitCommand)) {
                 running = false; 
-            } else {
+           } else {
                 System.out.println(" Failed: " + name + " could not be found.");
-            }
+           }
             System.out.println();
         }
         System.out.println("ADIOS.");
