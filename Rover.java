@@ -121,7 +121,7 @@ public class Rover {
             x -= d;
             y += d;
         }
-        System.out.println(name + " moved " + d + " units " + getDirectionName(dir) + ".");
+        System.out.println(name + " moved " + d + " places " + getDirectionName(dir) + ".");
     }
         // this.energy -= (1*d);
         // System.out.println(name + "moved" + getDirectionName(dir) + " by " + d);
@@ -149,7 +149,7 @@ public class Rover {
     }
     /**
      * Rover is being turned in a positive or negative direction based on the int
-     * Universal Roatation
+     * Universal Rotation
      * Used int i, whenever it reaches 8 it'll stop the loop 
      * After the loop, it increments 1 by i++ which stops the loop once it meets 8
      * @param d How many times the rover should rotate 

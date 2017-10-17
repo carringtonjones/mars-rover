@@ -34,15 +34,15 @@ public class RoverRunner
             
             if (actor != null) {
                 System.out.println("Type a menu number here:");
-                System.out.println("1. Rover Movement");
-                System.out.println("2. Rotation to the right");
-                System.out.println("3. Rotation to the left");
-                System.out.println("4. Teleportation");
+                System.out.println("(1) Rover Movement");
+                System.out.println("(2) Rotation to the right");
+                System.out.println("(3) Rotation to the left");
+                System.out.println("(4) Teleportation");
                 String command = input.readString();
                 if (command.equals("1")) {
-                    System.out.println("Enter a x coordinate: ");
+                    System.out.println("Type a x coordinate to move: ");
                     int x = input.readInt();
-                    System.out.println("Enter a y coordinate: ");
+                    System.out.println("Type a y coordinate to move: ");
                     int y = input.readInt();
                     actor.moveTo(x, y);
                 } else if (command.equals("2")) {
@@ -50,9 +50,9 @@ public class RoverRunner
                 } else if (command.equals("3")) {
                     actor.rotateLeft();
                 } else if (command.equals("4")) {
-                    System.out.println(" Enter a rover x cord: ");
+                    System.out.println(" Type a rover x coordinate to teleport: ");
                     int x = input.readInt();
-                    System.out.println(" Enter a rover y cord: ");
+                    System.out.println(" Type a rover y coordinate to teleport:  ");
                     int y = input.readInt();
                     actor.teleport(x, y);
                 } else {
