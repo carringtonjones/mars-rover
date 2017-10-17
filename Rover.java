@@ -225,7 +225,7 @@ public class Rover {
         }
     } 
     /**
-     * Takes the rover home, to its original cordinates 
+     * Takes the rover home, to its original coordinates 
      */
     public void goHome() {
         moveTo(startingx, startingy);
